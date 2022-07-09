@@ -1,0 +1,156 @@
+# #작은 따옴표를 출력하고 싶을때
+# print("I'm learning Python")
+# print("i\'m learning Python")
+#
+# #큰 따옴표를 출력하고 싶을 때
+# print('그녀가 물었다."저기요"')
+# print("그녀가 물었다. \"저기요\"")
+#
+#
+# a="Hello world"
+# #문자열 인덱싱
+# print(a[0]) #출력값 => "H"
+# print(a[-1]) #출력값 => "d"
+#
+# #문자열 슬라이싱
+# print(a[:]) #출력값 =>"Hello world"
+# print(a[2:5]) #출력값 =>"ell
+#
+# #문자열 더하기
+# a= "Hello"
+# b="world"
+# print(a+b) #출력값 =>"Helloworld"
+# print(a+' '+b+'!') #출력값 =>"Hello world!"
+#
+# #문자열 곱하기
+# star='*'
+# print(star * 5) #출력값 => '*****'
+#
+# #문자열 길이 구하기
+# a = "Python"
+# print(len(a)) #출력값 => 6
+#
+# print(a.count('o')) #출력값 => 2해당 문자의 개수 반환
+# print(a.find('1')) #출력값 => 2해당 문자의 시작 인덱스 반환,
+#                    #없는 값을 찾을시 -1 반환
+# print(a. index('x')) #출력값=> 2해당 문자의 시작 인덱스 반환
+#                      #없는값을 찾을 시 오류발생
+# print(','.join(a)) #출력값 => H,e,l,l,o, ,P,y,t,h,o,n
+#                    #해당 문자를 인덱스 사이사이에 추가한 값을 반환
+#
+# print(a.replace('Py', 'MY')) #출력값 => Hello MYthon
+#                     #(old,new) old문자를 new문자로 치환한 값을 반환
+# print(a.split()) #출력값 => ['Hello','Python'] 해당 문자를 기준으로 문자열을 나누어서 반환
+# print(a.upper())#출력값 => 대문자로 변환후 반환
+# print(a.lower())#출력값 => 소문자로 변환후 반환
+#
+# a="...app.le...."
+# #문자열에서 연속되는 해당 문자를 제거 후 반환
+# print(a.lstrip('.'))#출력값 => app.le....
+# print(a.strip('.')) #출력값 => app.le
+# print(a.rstrip('.'))#출력값 => ....app.le
+
+
+
+
+
+
+
+
+#크로아티아 알파벳
+# user = input()
+# croatia = ['dz=','c=','c-','d-','lj','nj','s=','z=']
+#
+# i =0
+# cnt = 0
+# while i < len(user):
+#     temp = i
+#     for j in range(len(croatia)):
+#         if user[i:].find(croatia[j]) == 0:
+#             i += len(croatia[j])
+#             break
+#     if temp ==i:
+#         i+=1
+#     cnt += 1
+#
+# print(cnt)
+
+
+# user = input()
+# cnt = len(user)
+# for i in range(len(user)):
+#     if user[i] == '=':
+#         if user[i-1]=='c' or user[i-1] == 's':
+#             cnt-=1
+#         else:
+#             if user [i-1] =='z':
+#                 if user[i-2] == 'd':
+#                     cnt-=2
+#                 else:
+#                     cnt -= 1
+#     elif user[i] == '-':
+#         if user[i-1]=='c' or user[i-1] =='d':
+#             cnt -=1
+#     elif user[i]=="j":
+#         if user[i-1] == 'l' or user[i-1] =='n':
+#             cnt-=1
+# print(cnt)
+
+
+
+#리스트
+# list_a=[1,2,3,[4,5,[6,7],8],9,10]
+# print(list_a[3][0])
+# print(len(list_a))
+# print(list_a[:3])
+#
+#
+# list_a=[1,2,3,4]
+#
+# list_a.insert(1,5)#첫번째 자리에다 자기가 놓고싶은 자리에 인덱스 번호를 쓰고 두번째 자리에다 무슨 숫자를 넣고 싶은지 쓰기
+# print(list_a)
+# list_a[2]=7
+# #4라는 값을 삭제
+# del list_a[3]
+#
+# list_b=['a','b','c','d']
+#
+# #리스트간의 덧셈
+# print(list_a + list_b)
+# # 리스트와 정수의 곱셈
+# print(list_a * 3)
+#
+# a=[4,1,2,3]
+# a.apppend(5)# = 해당 값을 리스트의 마지막 인덱스에 추가
+# a.reserve()#reverse = 순서 반전(원본 데이터를 반전)
+# print(list(reversed(a))) #복사본을 가지고 순서 반전후 리스트를 반환
+# a.insert(0,7)#insert(위치, 값) = 해당 위치에 원하는 값을 삽입
+# print(a.pop(0))#()안에 아무것도 넣지 않았을때에는 가장 마지막 인덱스에 위치한 값이 추출된다. ()안에는 인덱스 번호가 들어간다.
+#
+# print(a)
+# print(a.count(3)) #count(값) = 해당 값이 리스트에 몇개 존재하는지를 반환
+# a.sort(reverse =True)#sort() 순서 정렬
+# print(sorted(a,reverse=True))
+# print(a)
+# a.remove(5)#remove(값) = 리스트에서 해당 값을 삭제
+# b=[6,7,8,9]
+# a.extend(b)#리스트의 확장()
+# a.append(b)
+# print(len(a))
+
+c= int(input())
+for i in range(c):
+    scores=input("학생수, 점수들").split()
+    n = int(scores[0]) #학생수 '5'
+    scores=scores[:1]
+    total =0
+    for j in scores:
+        total += int(j)
+    print(total)
+    average=total/n#평균 = 총점수 / 학생수
+    N = 0
+    for k in scores:
+        if average < int(k):
+            N += 1
+    print("%.3f%%" %(N / n * 100))
+    print("%.3f%")
